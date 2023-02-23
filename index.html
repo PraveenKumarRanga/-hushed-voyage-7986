@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>myKart</title>
+<style>
+    *{
+        box-sizing: border-box;
+    }
+    body{
+        margin:0px;
+        padding:-0px;
+    }
+    #nav{
+        background-color: aqua;
+        display:flex;
+        justify-content: space-around;
+        margin : auto;
+        height: 60px;;
+    }
+    #logo h1{
+        margin:auto;
+        height:60px;
+        border:2px solid;
+        padding-top: 5px;
+        width:100%;
+        cursor:pointer;
+    }
+
+    #search{
+        border:2px solid;
+        width:63%;
+    }
+    #login{
+        width:20%;
+        
+    }
+
+    #login >button{
+        height:60px;
+        border:2px solid;
+        width: 100%;
+    }
+    #cart{
+        width:10%;
+    }
+    #cart >button{
+        height: 60px;
+        width:100%;
+        border:2px solid;
+    }
+    button:hover{
+       cursor:pointer;
+    }
+
+    #section{
+        border: 1px solid;
+        display:flex;
+        margin:auto;
+        justify-content: space-around;
+        height:50px;
+       padding-left: 10px;
+        gap:10px;
+    }
+    #section > a{
+        font-size:20px;
+        text-decoration: none;
+        color:rgb(53, 50, 50);
+        
+    }
+    a:hover{
+        cursor:pointer;
+    }
+    #sale{
+        border:2px solid red;
+        width:65%;
+        height:600px;
+       box-shadow: 0px 0px 5px 0px;
+        margin:auto;
+        margin-top:40px;
+    }
+   #sale_img{
+        width:100%;
+        height: 100%;
+    }
+
+    #cont{
+        width:65%;
+        display:grid;
+        grid-template-columns: repeat(2,1fr);
+        margin:auto;
+        border: 2px solid red;
+        gap:20px;
+        margin-top: 40px;
+    }
+    #cont > div{
+        width:100%;
+        border: 2px solid red;
+    }
+    #cont > div img{
+        width:100%;
+        height:100%;
+    }
+    #arrivals{
+        width: 100%;
+        height:450px;
+        border: 2px solid green;
+        margin-top: 40px;
+    }
+    #arrivals img{
+        width:100%;
+        height: 100%;
+    } 
+    
+    
+    
+#prac{
+    position:relative;
+    width:100%;
+    height: 400px;
+    margin-top: 40px;
+
+}
+#prac >img {
+    width:100%;
+    height: 100%;
+}
+.data{
+    position: absolute;
+    top:0px;
+    left:250px;
+    color: white;
+    font-size: 30px;
+}
+
+#prac button{
+    position: absolute;
+    top:340px;
+    left:80px;
+    border:none;
+    background-color: green;
+    color:white;
+    width:120px;
+    height: 40px;
+    border-radius: 20px;
+
+}
+
+
+#category{
+    display:grid;
+    width:70%;
+    margin:auto;
+    grid-template-columns: repeat(3,1fr);
+    text-align: center;
+    gap:20px;
+    font-size: 30px; 
+    margin-top: 40px;
+}
+
+#category img{
+    width:100%;
+
+}
+
+#category button{
+    border:none;
+    background-color: green;
+    color:white;
+    width:120px;
+    height: 40px;
+    border-radius: 20px;
+}
+/* 
+img:hover{
+    transform: scale((1.2));
+} */
+
+
+@media only screen and (min-width: 601px) and (max-width:950px){
+    #section{
+        display : none;
+    }
+    #section > a{
+        font-size:0%
+    }
+}
+
+
+</style>
+    
+
+</head>
+<body>
+    <div id="nav">
+        <div id="logo">
+            <h1 >myKart</h1>
+        </div>
+        <input id="search" type="text" placeholder="Search Here"/>
+        <div id="login">
+            <button >My Account & Orders</button>
+        </div>
+        <div id="cart">
+            <button >Cart</button>
+        </div>
+
+    </div>
+    <div id="section">
+        <a href="./men.html">MEN</a>
+        <a href="./women.html">WOMEN</a>
+        <a href="">KIDS</a>
+        <a href="">FOOTWEAR</a>
+        <a href="">CAMP & HIKE</a>
+        <a href="">CLIMB</a>
+        <a href="">SNOW</a>
+        <a href="">CYCLE</a>
+        <a href="">ACTIVITIES</a>
+        <a href="">BRANDS</a>
+        <a href="" style="color:red">SALE & OUTLET</a>
+    </div>
+    <div id="sale">
+        <a href="sale"><img id="sale_img" src="./image/sale.jfif" alt="error"></a>
+    </div>
+
+    <div id="cont">
+        <div>
+           <a href=""> <img src="./image/free_shipping.png" alt="error"></a>
+        </div>
+        <div>
+           <a href=""> <img src="./image/rewards.webp" alt="error"></a>
+        </div>
+        <div>
+           <a href=""> <img src="./image/clearance_new.jpg" alt="error"></a>
+        </div>
+        <div>
+            <a href=""><img src="./image/jackets.jfif" alt="error"></a>
+        </div> 
+    </div>
+    <div id="arrivals">
+        <a href=""><img src="./image/new_arrivals.webp" alt="error"></a>
+        
+    </div>
+
+<div id="category">
+    <div>
+        <a href=""><img src="./image/men new.jpeg" alt=""></a>
+        <h3>Men's</h3>
+        <button>Shop Now</button>
+    </div>
+
+    <div>
+        <a href=""><img src="./image/women new.jfif" alt=""></a>
+        <h3>Women's</h3>
+        <button>Shop Now</button>
+    </div>
+
+    <div>
+        <a href=""><img src="./image/kids.webp" alt=""></a>
+        <h3>Kids</h3>
+        <button>Shop Now</button>
+    </div>
+
+   
+</div>
+
+<div id="prac">
+   <img src="./image/camping gear.jpg" alt="error">
+    <div class="data">
+        <h1>Up-to 40% SALE</h1>
+        <button>SHOP NOW</button>
+    </div>
+</div>
+    
+
+<div id="category">
+    <div>
+        <a href=""><img src="./image/sleeping bag.jpg" alt=""></a>
+        <h3>SLEEPING BAGS</h3>
+        <button>SHOP ALL</button>
+    </div>
+
+    <div>
+        <a href=""><img src="./image/trekking poles.jpg" alt=""></a>
+        <h3>TREKKING POLES</h3>
+        <button>SHOP ALL</button>
+    </div>
+
+    <div class="zoom">
+        <a href=""><img src="./image/tents.jpg" alt=""></a>
+        <h3>TENTS</h3>
+        <button>SHOP ALL</button>
+    </div>
+
+   <div id="container">
+
+    
+<div class="text">
+   <img src="./image/techwick.jpg" alt="error">
+    <div class="innertext">
+        <h1>TECHWICK</h1>
+        <button>SHOP</button>
+    </div>
+</div>
+
+   
+<div class="text">
+    <img src="./image/techwick.jpg" alt="error">
+     <div class="innertext">
+         <h1>TECHWICK</h1>
+         <button>SHOP</button>
+     </div>
+ </div>
+
+    
+<div class="text">
+    <img src="./image/techwick.jpg" alt="error">
+     <div class="innertext">
+         <h1>TECHWICK</h1>
+         <button>SHOP</button>
+     </div>
+ </div>
+
+    
+<div class="text">
+    <img src="./image/techwick.jpg" alt="error">
+     <div class="innertext">
+         <h1>TECHWICK</h1>
+         <button>SHOP</button>
+     </div>
+ </div>
+
+    
+<div class="text">
+    <img src="./image/techwick.jpg" alt="error">
+     <div class="innertext">
+         <h1>TECHWICK</h1>
+         <button>SHOP</button>
+     </div>
+ </div>
+
+    
+<div class="text">
+    <img src="./image/techwick.jpg" alt="error">
+     <div class="innertext">
+         <h1>TECHWICK</h1>
+         <button>SHOP</button>
+     </div>
+ </div>
+
+    
+<div class="text">
+    <img src="./image/techwick.jpg" alt="error">
+     <div class="innertext">
+         <h1>TECHWICK</h1>
+         <button>SHOP</button>
+     </div>
+ </div>
+
+    
+<div class="text">
+    <img src="./image/techwick.jpg" alt="error">
+     <div class="innertext">
+         <h1>TECHWICK</h1>
+         <button>SHOP</button>
+     </div>
+ </div>
+   </div>
+</div>
+</body>
+</html>
