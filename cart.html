@@ -4,9 +4,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>myKart</title>
-<style>
-    *{
+    <title>myKart Cart</title>
+    <style>
+         *{
         box-sizing: border-box;
     }
     body{
@@ -32,7 +32,9 @@
         cursor:pointer;
         
     }
-   
+    #logo>a{
+      text-decoration: none;
+    }
 
     #search{
       padding-left: 30px;
@@ -60,7 +62,7 @@
         width:10%;
         
     }
-    #cart >a button{
+    #cart button{
         height: 60px;
         width:100%;
         border:none;
@@ -90,128 +92,34 @@
     a:hover{
         cursor:pointer;
     }
-    #sale{
-       
-        width:65%;
-        height:600px;
-       box-shadow: 0px 0px 5px 0px;
-        margin:auto;
-        margin-top:40px;
-    }
-   #sale_img{
-        width:100%;
-        height: 100%;
-    }
 
-    #cont{
-        width:65%;
+    #cart-cont{
+        width:90%;
         display:grid;
-        grid-template-columns: repeat(2,1fr);
+        grid-template-columns: repeat(5,1fr);
         margin:auto;
-        
-        gap:20px;
-        margin-top: 40px;
+
     }
-    #cont > div{
+    #cart-cont > div{
         width:100%;
-        
+        height:500px;
     }
-    #cont > div img{
+    #cart-cont >div img{
         width:100%;
-        height:100%;
+        height:60%;
     }
-    #arrivals{
-        width: 100%;
-        height:450px;
-       
-        margin-top: 40px;
+    #cart-cont >div button{
+        border : none;
+      margin-left: 10%;
+      margin-right: 10%;
+      border-radius: 20px;
+      height: 40px;
+      width: 100px;
+      color: white;
+      background-color: green;
     }
-    #arrivals img{
-        width:100%;
-        height: 100%;
-    } 
-    
-    
-    
-#prac{
-    position:relative;
-    width:100%;
-    height: 400px;
-    margin-top: 40px;
 
-}
-#prac >img {
-    width:100%;
-    height: 100%;
-}
-.data{
-    position: absolute;
-    width:50%;
-    top:0%;
-    left:20%;
-    color: white;
-    font-size: 30px;
-}
-
-#prac button{
-    position: absolute;
-    top:340px;
-    left:80px;
-    border:none;
-    background-color: green;
-    color:white;
-    width:120px;
-    height: 40px;
-    border-radius: 20px;
-
-}
-
-
-#category{
-    display:grid;
-    width:70%;
-    margin:auto;
-    grid-template-columns: repeat(3,1fr);
-    text-align: center;
-    gap:20px;
-    font-size: 30px; 
-    margin-top: 40px;
-}
-
-#category img{
-    width:100%;
-
-}
-
-#category button{
-    border:none;
-    background-color: green;
-    color:white;
-    width:120px;
-    height: 40px;
-    border-radius: 20px;
-}
-#container {
-    width:70%;
-    margin:auto;
-    display:grid;
-    grid-template-columns: repeat(4,1fr);
-    gap:20px 20px;
-    margin-top: 40px;
-    
-    
-}
-
-#container >div{
-    width:100%;
-    
-}
-#container > div img{
-    width:100%;
-    
-
-}
-
+    /*footer part  */
 #footer{
     display:grid;
     width:100%;
@@ -222,6 +130,8 @@
     padding-right:10px;
     margin-top: 40px;
 }
+
+
 #foot a{
     display: block;
     font-size: 25px;
@@ -238,10 +148,7 @@ h3{
    border: 1px solid white;
    color:white;
 }
-
-
-
-
+    
 @media only screen and (min-width: 601px) and (max-width:950px){
     #section{
         display : none;
@@ -249,27 +156,41 @@ h3{
     #section > a{
         font-size:0%
     }
+    #cart-cont{
+        grid-template-columns: repeat(3,1fr);
+    }
 }
+   
+@media only screen and (min-width: 400px) and (max-width:600px){
+    #section{
+        display : none;
+    }
+    #section > a{
+        font-size:0%
+    }
 
-
-</style>
-    
-
+    #cart-cont{
+        grid-template-columns: repeat(1,1fr);
+    }
+}
+    </style>
 </head>
 <body>
     <div id="nav">
         <div id="logo">
-            <h1 >myKart</h1>
+            <a href="./index.html"><h1 >myKart</h1></a>
         </div>
         <input id="search" type="text" placeholder="Search Here"/>
         <div id="login">
-            <a href="./login.html"><button >My Account & Orders</button></a>
+           <a href="./login.html"> <button >My Account & Orders</button></a>
         </div>
         <div id="cart">
-           <a href="./cart.html"> <button >Cart</button></a>
+            <button >Place Order</button>
         </div>
+       
 
     </div>
+    
     <div id="section">
         <a href="./men.html">MEN</a>
         <a href="./women.html">WOMEN</a>
@@ -283,124 +204,13 @@ h3{
         <a href="">BRANDS</a>
         <a href="" style="color:red">SALE & OUTLET</a>
     </div>
-    <div id="sale">
-        <a href="sale"><img id="sale_img" src="./image/sale.jfif" alt="error"></a>
+    <h1 id="total">
+        Your total order value is :- <span id="cart-total">0</span>
+      </h1>
+    <div id="cart-cont">
+        <!-- cart items here -->
     </div>
-
-    <div id="cont">
-        <div>
-           <a href=""> <img src="./image/free_shipping.png" alt="error"></a>
-        </div>
-        <div>
-           <a href=""> <img src="./image/rewards.webp" alt="error"></a>
-        </div>
-        <div>
-           <a href=""> <img src="./image/clearance_new.jpg" alt="error"></a>
-        </div>
-        <div>
-            <a href=""><img src="./image/jackets.jfif" alt="error"></a>
-        </div> 
-    </div>
-    <div id="arrivals">
-        <a href=""><img src="./image/new_arrivals.webp" alt="error"></a>
-        
-    </div>
-
-<div id="category">
-    <div>
-        <a href=""><img src="./image/men new.jpeg" alt=""></a>
-        <h3>Men's</h3>
-        <button>Shop Now</button>
-    </div>
-
-    <div>
-        <a href=""><img src="./image/women new.jfif" alt=""></a>
-        <h3>Women's</h3>
-        <button>Shop Now</button>
-    </div>
-
-    <div>
-        <a href=""><img src="./image/kids.webp" alt=""></a>
-        <h3>Kids</h3>
-        <button>Shop Now</button>
-    </div>
-
-   
-</div>
-
-<div id="prac">
-   <img src="./image/camping gear.jpg" alt="error">
-    <div class="data">
-        <h1>Up-to 40% SALE</h1>
-        <button>SHOP NOW</button>
-    </div>
-</div>
     
-
-<div id="category">
-    <div>
-        <a href=""><img src="./image/sleeping bag.jpg" alt=""></a>
-        <h3>SLEEPING BAGS</h3>
-        <button>SHOP ALL</button>
-    </div>
-
-    <div>
-        <a href=""><img src="./image/trekking poles.jpg" alt=""></a>
-        <h3>TREKKING POLES</h3>
-        <button>SHOP ALL</button>
-    </div>
-
-    <div >
-        <a href=""><img src="./image/tents.jpg" alt=""></a>
-        <h3>TENTS</h3>
-        <button>SHOP ALL</button>
-    </div>
-</div>
-   <div id="container">
-
-    
-<div class="text">
-   <a href=""><img src="./image/tech_wick.jfif" alt="error"></a>
-   
-</div>
-
-   
-<div class="text">
-    <a href=""><img src="./image/soft.jpg" alt="error"></a>    
- </div>
-
-    
-<div class="text">
-    <a href=""><img src="./image/reward.jpg" alt="error"></a>    
- </div>
-
-    
-<div class="text">
-    <a href=""><img src="./image/schools.jpg" alt="error"></a>    
- </div>
-
-    
-<div class="text">
-    <a href=""><img src="./image/join us.jpg" alt="error"></a>    
- </div>
-
-    
-<div class="text">
-    <a href=""><img src="./image/goEAST.jpg" alt="error"></a>    
- </div>
-
-    
-<div class="text">
-    <a href=""><img src="./image/kayaks.jpg" alt="error"></a>     
- </div>
-
-    
-<div class="text">
-    <a href=""><img src="./image/bike.jfif" alt="error"></a>    
- </div>
-   </div>
-
-
 <div id="footer">
     <div id="foot">
         <h3>GET TO KNOW US</h3>
@@ -448,4 +258,69 @@ h3{
 </div>
 
 </body>
+<script>
+   
+   let lsData = JSON.parse(localStorage.getItem("cart")) || [];
+    let items = document.getElementById("cart-cont");
+DisplayData(lsData);
+
+function DisplayData(data){
+  items.innerHTML="";
+
+  for(let i=0; i<lsData.length; i++){
+    let card = document.createElement("div");
+
+    let image = document.createElement("img");
+    let name = document.createElement("h2");
+    let price = document.createElement("h2");
+    let buyBtn = document.createElement("button");
+    let remove =document.createElement("button");
+
+    image.src = lsData[i].img;
+    name.innerText = lsData[i].name;
+    price.innerText = lsData[i].price;
+   
+    buyBtn.innerText = "Buy";
+    remove.innerText = "Remove";
+
+
+     buyBtn.addEventListener("click",()=>{
+      alert("Proceed To pay");
+     })
+
+     remove.addEventListener("click",()=>{
+     lsData = lsData.filter((ele)=>{
+        return ele.name != lsData[i].name;
+     })
+     localStorage.setItem("cart",JSON.stringify(lsData));
+     DisplayData();
+     });
+    
+
+     let sum = 0;
+     for(let i=0; i<lsData.length; i++){
+        sum += lsData[i].price * lsData[i].quantity;
+     }
+
+     document.getElementById("cart-total").innerText = sum;
+
+
+    card.append(image,name, price, buyBtn,remove);
+    items.append(card);
+   
+   
+  }
+
+
+
+}
+DisplayData();
+
+ 
+document.getElementById("cart").addEventListener("click",()=>{
+    alert("Proceed To Pay");
+})
+
+
+</script>
 </html>
